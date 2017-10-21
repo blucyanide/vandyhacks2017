@@ -2,5 +2,7 @@
   "name": "vandyhacks2017",
   "app_id": "11a23728",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

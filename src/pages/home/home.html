@@ -2,7 +2,7 @@
       <ion-grid>
         <ion-row>
           <ion-col col-2><img class="img-circle" src="../../../assets/imgs/profile.jpg" /> </ion-col>
-          <ion-col col-6> <span id="title"> Title </span> </ion-col>
+          <ion-col col-10> <span id="title"> {{user.name}}</span> </ion-col>
         </ion-row>
       </ion-grid>
 </div>
@@ -17,12 +17,13 @@
     <img class="burgerPics" id ="b4" src="../../../assets/imgs/bu4.png"  />
     <img class="burgerPics" id ="b5" src="../../../assets/imgs/bu6.png"  />
     </div>
-    <img id="full-button" src="../../../assets/imgs/main-button.png"  />
+    <img id="full-button" src="../../../assets/imgs/main-button.png"
+         (click)="explore()" />
   </div>
 
   <div id ="gray-box">
   <span id = "bottom-text"> Developer's Picks in
-  <span id="location"> Nashville, TN </span>
+  <span id="location"> {{user.city}}, {{user.state}} </span>
     : <br/>
   </span>
 

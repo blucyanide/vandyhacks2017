@@ -18,8 +18,8 @@ export class ResultPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ResultPage');
+  explore() {
+    this.navCtrl.push('ResultPage', {});
   }
 
 }

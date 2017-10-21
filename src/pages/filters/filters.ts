@@ -14,12 +14,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'filters.html',
 })
 export class FiltersPage {
+  longitude: number;
+  latitude: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.longitude = this.navParams.get("longitude");
+    this.latitude = this.navParams.get("latitude");
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FiltersPage');
+  explore() {
+    this.navCtrl.push('ResultPage', {});
   }
 
 }
