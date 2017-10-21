@@ -1,9 +1,9 @@
 export class Profile {
-  name:string;
-  email:string;
-  phone_number:string;
-  city:string;
-  state:string;
+  name:String;
+  email:String;
+  phone_number:String;
+  city:String;
+  state:String;
   constructor(name:string, email:string, phone_number:string, city:string, state:string) {
     this.name = name;
     this.email = email;
