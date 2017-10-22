@@ -12,7 +12,7 @@ export class HomePage {
   user: any;
 
   constructor(public navCtrl: NavController, public geo: GeoProvider) {
-    this.user = new Profile('Shamansha Chiang','shamansha@NiceButt.com',
+    this.user = new Profile('Shamansha','shamansha@NiceButt.com',
       '6159999999','Nashville','TN');
   }
 

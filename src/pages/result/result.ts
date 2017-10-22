@@ -36,9 +36,9 @@ export class ResultPage {
   search() {
     let radius;
     if (this.walking) {
-      radius = 1600;
+      radius = 1500;
     } else {
-      radius = 40000;
+      radius = 2560;
     }
     this.yelp.get(this.latitude, this.longitude, radius, this.term, this.price).subscribe(
       res => {
@@ -56,7 +56,6 @@ export class ResultPage {
       let index = Math.floor(Math.random() * response["total"]) + 1;
       this.selected = list[index];
       this.name = this.selected.name;
-      console.log(JSON.stringify(this.selected));
     }
   }
 

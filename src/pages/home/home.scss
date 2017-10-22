@@ -7,20 +7,22 @@ page-home {
 #header{
   background-color: #f4a742;
   padding: 5px;
-  margin-bottom: 20px;
+  box-shadow: 0 5px 5px grey;
 }
 #title{
   font-family: Passion One;
-  font-size: 60px;
+  font-size: 36px;
   color: white;
 }
 
 #main{
+  padding-top: 30%;
   text-align:center;
 }
 
 .img-circle {
     border-radius: 50%;
+    vertical-align: middle;
 }
 
 @keyframes bounceIn {
@@ -142,4 +144,16 @@ opacity: 0;
   animation-delay: 2.5s;
   animation-name: spin;
   animation-fill-mode: forwards;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+#content {
+  height: 100%;
+  background-image: url("../../assets/imgs/dinner.jpg");
+  background-size: cover;
 }
