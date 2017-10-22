@@ -15,5 +15,3 @@ This Project is a prototype made for VandyHacks 2017.
 ##### Google Map API
 ##### Uber API
 ##### Waze Deep Links
-
-
