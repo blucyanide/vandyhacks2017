@@ -8,6 +8,22 @@
 
 
 <ion-content padding>
+
+
+  <img id = "car" src ="../../../assets/imgs/car.png"/>
+  <script src="filters.js"></script>
+  <div id = "transport_container" (click)="changeColor()" [style.background-color]="color">
+  <p> Driving </p>
+  </div>
+
+  <div id="button-space">
+  <img id="small-button" src="../../../assets/imgs/small-button.png"/>
+  </div>
+  <div id="price">
+  </div>
+
   <p>{{latitude}}{{longitude}}</p>
   <p>{{city}}</p>
 </ion-content>
+
+
