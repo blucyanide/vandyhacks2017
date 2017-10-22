@@ -2,6 +2,15 @@ page-filters {
 
 }
 
+.toolbar{
+  background-color: #3a3a3a;
+  box-shadow: 0 5px 5px grey;
+}
+
+.toolbar-background{
+  background-color: #3a3a3a;
+}
+
 #transport_container{
 }
 #transport_car{
@@ -47,13 +56,15 @@ page-filters {
 }
 #small-button{
   position:absolute;
-  margin-top: -60px;
-  width:150px;
+  margin-top: -8vh;
+  right: 28vw;
+  width:38vw;
   animation: pulse2 3s infinite;
 }
 
 #button-space{
   text-align:center;
+  height: 0 !important;
 }
 
 @keyframes pulse2 {

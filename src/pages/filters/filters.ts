@@ -26,6 +26,8 @@ export class FiltersPage {
     this.longitude = this.navParams.get("longitude");
     this.latitude = this.navParams.get("latitude");
     this.price = this.navParams.get("price");
+    this.walking = false;
+    this.term = "breakfast";
   }
 
   search() {
@@ -46,6 +48,7 @@ export class FiltersPage {
   }
 
   hideWalk() {
+    this.walking = false;
     let x = document.getElementById("transport_walk");
     let y = document.getElementById("transport_car");
     x.style.display = "none";
@@ -54,36 +57,42 @@ export class FiltersPage {
   }
 
   hideCar() {
+    this.walking = true;
     let y = document.getElementById("transport_walk");
     let x = document.getElementById("transport_car");
     x.style.display = "none";
     y.style.display = "block";
   }
   hideBreakfast() {
+    this.term = "lunch";
     let y = document.getElementById("type_breakfast");
     let x = document.getElementById("type_lunch");
     y.style.display = "none";
     x.style.display = "block";
   }
   hideLunch() {
+    this.term = "dinner";
     let y = document.getElementById("type_lunch");
     let x = document.getElementById("type_dinner");
     y.style.display = "none";
     x.style.display = "block";
   }
   hideDinner() {
+    this.term = "cafe";
     let y = document.getElementById("type_dinner");
     let x = document.getElementById("type_cafe");
     y.style.display = "none";
     x.style.display = "block";
   }
   hideCafe() {
+    this.term = "latenight";
     let y = document.getElementById("type_cafe");
     let x = document.getElementById("type_snack");
     y.style.display = "none";
     x.style.display = "block";
   }
   hideSnack() {
+    this.term = "breakfast";
     let y = document.getElementById("type_snack");
     let x = document.getElementById("type_breakfast");
     y.style.display = "none";
