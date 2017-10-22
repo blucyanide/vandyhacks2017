@@ -6,9 +6,9 @@ This Project is a prototype made for VandyHacks 2017.
 
 ## Technology
 
-#####Angular 4
-#####Ionic 3
-#####Cordova.
+##### Angular 4
+##### Ionic 3
+##### Cordova.
 
 ## API references
 ##### Yelp Fusion API
