@@ -1,26 +1,19 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+## Summary
 
-## How to use this template
+This App suggests a random restaurant based on the device's current location
+and the user's filtering criteria (walking vs. driving, price range, etc.).
+This Project is a prototype made for VandyHacks 2017.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+## Technology
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+#####Angular 4
+#####Ionic 3
+#####Cordova.
 
-### With the Ionic CLI:
+## API references
+##### Yelp Fusion API
+##### Google Map API
+##### Uber API
+##### Waze Deep Links
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
-
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
 
