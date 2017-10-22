@@ -9,18 +9,20 @@
 
 <ion-content padding>
 
+  <img src="../../../assets/imgs/drive2.png" id ="transport_car"(click)="hideCar()" [style.display]="dis" />
+  <img src="../../../assets/imgs/walk2.png" id ="transport_walk" (click)="hideWalk()" [style.display]="dis" />
 
-  <img id = "car" src ="../../../assets/imgs/car.png"/>
-  <script src="filters.js"></script>
-  <div id = "transport_container" (click)="changeColor()" [style.background-color]="color">
-  <p> Driving </p>
-  </div>
 
   <div id="button-space">
   <img id="small-button" src="../../../assets/imgs/small-button.png"/>
   </div>
-  <div id="price">
-  </div>
+<br/>
+  <img src="../../../assets/imgs/breakfast1.png" id ="type_breakfast"(click)="hideBreakfast()" [style.display]="dis" />
+  <img src="../../../assets/imgs/lunch.png" id ="type_lunch" (click)="hideLunch()" [style.display]="dis" />
+  <img src="../../../assets/imgs/dinner3.png" id ="type_dinner" (click)="hideDinner()" [style.display]="dis" />
+  <img src="../../../assets/imgs/cafe.png" id ="type_cafe" (click)="hideCafe()" [style.display]="dis" />
+  <img src="../../../assets/imgs/midnight.png" id ="type_snack" (click)="hideSnack()" [style.display]="dis" />
+
 
   <p>{{latitude}}{{longitude}}</p>
   <p>{{city}}</p>
