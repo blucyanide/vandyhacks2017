@@ -11,7 +11,7 @@ page-home {
 }
 #title{
   font-family: Passion One;
-  font-size: 60px;
+  font-size: 20px;
   color: white;
 }
 
@@ -66,14 +66,17 @@ page-home {
 
 @keyframes pulse {
   0% {
-    background-color: #ffc32d;
+    transform: scale(0.8);
+    opacity: .6;
   }
   50% {
-    background-color:#ffda7f;
+    transform: scale(1);
+    opacity: 1;
   }
-   100% {
-    background-color: #ffc32d;
-   }
+  100% {
+    transform: scale(0.8);
+    opacity: .6;
+  }
 }
 
 #button-text {
@@ -92,6 +95,10 @@ page-home {
   animation-name: fadeIn;
   z-index: 100;
   animation-fill-mode: forwards;
+}
+
+#pulsing{
+  animation: pulse 3s infinite;
 }
 
 #b1{
