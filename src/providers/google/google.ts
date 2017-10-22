@@ -10,15 +10,21 @@ import { Headers, RequestOptions } from '@angular/http';
 */
 @Injectable()
 export class GoogleProvider {
+
   google_response:any;
+  url:string = "https://www.google.com/maps/dir/?api=1";
+
+
   constructor(public http: Http) {
     console.log('Hello GoogleProvider Provider');
   }
-  url:string = "https://www.google.com/maps/dir/?api=1";
-  get (latitude:number, longitude:number, destination:string, travelmode:string) {
+  get (latitude:number, longitude:number, destination:string, travelmode?:string) {
     let location = encodeURI(latitude+","+longitude);
     travelmode = encodeURI(travelmode);
-    destination = encodeURI(travelmode);
+    destination = encodeURI(destination);
+
+    this.url = this.url + "&"
+
     let opts = new RequestOptions();
     opts.params.set("origin", location);
     opts.params.set("destination", destination);
