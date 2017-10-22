@@ -3,14 +3,16 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 import { Geolocation } from '@ionic-native/geolocation';
+import { NativeGeocoder, NativeGeocoderReverseResult} from '@ionic-native/native-geocoder';
 
 @Injectable()
 export class GeoProvider {
 
   latitude: number;
   longitude: number;
+  city: string;
 
-  constructor(public http: Http, private geolocation: Geolocation)  {
+  constructor(public http: Http, private geolocation: Geolocation, private nativeGeocoder: NativeGeocoder)  {
     this.subscribe();
     console.log('GeoProvider Provider Initiated');
   }
@@ -33,6 +35,12 @@ export class GeoProvider {
         this.longitude = data.coords.longitude;
       }
     });
+  }
+
+  getcity(latitide: number, longitude: number){
+    this.nativeGeocoder.reverseGeocode(latitide, longitude)
+      .then((result: NativeGeocoderReverseResult) => console.log(JSON.stringify(result)))
+      .catch((error: any) => console.log(error));
   }
 
 }
