@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { YelpProvider } from '../../providers/yelp/yelp';
+import { GoogleProvider } from '../../providers/google/google'
 
 @IonicPage()
 @Component({
@@ -19,8 +20,11 @@ export class ResultPage {
   selected: any;
   name: any;
   address: string;
+  keywords: Array<string> = [];
+  google_url: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private yelp: YelpProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private yelp: YelpProvider, private google: GoogleProvider) {
     // this.longitude = this.navParams.get("longitude");
     // this.latitude = this.navParams.get("latitude");
     // this.walking = this.navParams.get("walking");
@@ -65,6 +69,19 @@ export class ResultPage {
       this.address = this.selected.location.address1+" "+this.selected.location.address2+" "+
         this.selected.location.address3+", "+this.selected.location.city+", "
         +this.selected.location.state;
+
+      for (let item of this.selected.categories) {
+        this.keywords.push(item.title);
+      }
+
+      let travelmode;
+      if (this.walking) {
+        travelmode = "walking";
+      } else {
+        travelmode = "driving";
+      }
+
+      this.google_url = this.google.buildgoogleURL(this.latitude, this.longitude, this.address, travelmode);
     }
   }
 
