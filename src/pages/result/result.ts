@@ -27,16 +27,12 @@ export class ResultPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private yelp: YelpProvider, private google: GoogleProvider) {
-    // this.longitude = this.navParams.get("longitude");
-    // this.latitude = this.navParams.get("latitude");
-    // this.walking = this.navParams.get("walking");
-    // this.term = this.navParams.get("term");
-    // this.price = this.navParams.get("price");
-    this.longitude = -86.7816;
-    this.latitude = 36.1627;
-    this.walking = true;
-    this.term = "dinner";
-    this.price = 2;
+    this.longitude = this.navParams.get("longitude");
+    this.latitude = this.navParams.get("latitude");
+    this.walking = this.navParams.get("walking");
+    this.term = this.navParams.get("term");
+    this.price = this.navParams.get("price");
+
     this.search();
   }
 
