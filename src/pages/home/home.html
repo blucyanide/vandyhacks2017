@@ -1,8 +1,11 @@
+<div id="content">
 <div id = "header">
       <ion-grid>
         <ion-row>
           <ion-col col-2><img class="img-circle" src="../../../assets/imgs/profile.jpg" /> </ion-col>
-          <ion-col col-10> <span id="title"> {{user.name}}</span> </ion-col>
+          <ion-col col-10> <span id="title"> {{user.name}}</span>
+            <p>{{user.city}}, {{user.state}}</p>
+          </ion-col>
         </ion-row>
       </ion-grid>
 </div>
@@ -21,12 +24,5 @@
          (click)="explore()" />
   </div>
 
-  <div id ="gray-box">
-  <span id = "bottom-text"> Developer's Picks in
-  <span id="location"> {{user.city}}, {{user.state}} </span>
-    : <br/>
-  </span>
-
-  </div>
-
+</div>
 

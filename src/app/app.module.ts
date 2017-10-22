@@ -13,6 +13,7 @@ import { HomePage } from '../pages/home/home';
 import { YelpProvider } from '../providers/yelp/yelp';
 import { GeoProvider } from '../providers/geo/geo';
 import { HttpModule } from '@angular/http';
+import { GoogleProvider } from '../providers/google/google';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HttpModule } from '@angular/http';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     YelpProvider,
     GeoProvider,
-    AndroidPermissions
+    AndroidPermissions,
+    GoogleProvider
   ]
 })
 export class AppModule {}
