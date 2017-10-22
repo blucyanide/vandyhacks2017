@@ -27,13 +27,13 @@ export class YelpProvider {
     let opts = new RequestOptions();
     opts.headers = headers;
     opts.params.set('cll', latitude + ',' + longitude);
-    if (radius != null) {
+    if (radius !== undefined) {
       opts.params.set('radius', radius.toString(radius));
     }
-    if (term != null) {
+    if (term !== undefined) {
       opts.params.set('term', term);
     }
-    if (price != null) {
+    if (price !== undefined) {
       opts.params.set('price', price);
     }
 
