@@ -22,6 +22,8 @@ export class ResultPage {
   address: string;
   keywords: Array<string> = [];
   google_url: string;
+  waze_url: string;
+  uber_url: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private yelp: YelpProvider, private google: GoogleProvider) {
@@ -82,6 +84,8 @@ export class ResultPage {
       }
 
       this.google_url = this.google.buildgoogleURL(this.latitude, this.longitude, this.address, travelmode);
+      this.waze_url = this.google.buildwazeURL(this.latitude, this.longitude, this.address);
+      this.uber_url = this.google.builduberURL(this.address);
     }
   }
 

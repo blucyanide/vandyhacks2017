@@ -22,6 +22,7 @@ export class YelpProvider {
     let myParams = new URLSearchParams();
     myParams.append('latitude', latitude.toString());
     myParams.append('longitude', longitude.toString());
+    myParams.append('open_now',true.toString());
 
     myParams.append('limit','50');
     if (radius !== undefined) {
