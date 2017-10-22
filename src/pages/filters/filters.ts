@@ -50,9 +50,5 @@ export class FiltersPage {
       this.color = "#ffdd7a";
     }
   }
-
-  hideCar() {
-    document.getElementById("transport_car").display = "none";
-  }
 }
 
