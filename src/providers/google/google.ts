@@ -5,6 +5,7 @@ import 'rxjs/add/operator/map';
 export class GoogleProvider {
 
   url:string = "https://www.google.com/maps/dir/?api=1";
+  url2:string = "https://waze.com/ul";
 
 
   constructor() {
@@ -18,5 +19,10 @@ export class GoogleProvider {
     this.url = this.url + "&origin=" + origin + "&destination=" + destination + "&travelmode=" + travelmode;
 
     return this.url
+  }
+  buildwazeURL (latitude:number, longitude:number, destination:string) {
+    let origin = encodeURI(latitude + "," + longitude);
+    this.url2 = this.url2 + "?ll=" + origin + "?q=" + destination;
+    return this.url2;
   }
 }
