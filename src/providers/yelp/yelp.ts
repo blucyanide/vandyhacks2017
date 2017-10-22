@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { HttpParams } from '@angular/common/http';
 import { Headers, RequestOptions } from '@angular/http';
 
 /*
@@ -14,8 +13,7 @@ import { Headers, RequestOptions } from '@angular/http';
 export class YelpProvider {
 
   response:any;
-  access_token:string = "Lvn4KzYJD5hYXR_X08yYLOOhOqyeckfi4MRclBt782QyJ87pzksNCXzSpLNaH4s2Wq3L_oMruI-oRD27" +
-    "uiwoQpQPxJECALT6AaNfDhrNbazg_dQ6LcDv0NDcaZnrWXYx";
+  access_token:string = "Bearer Lvn4KzYJD5hYXR_X08yYLOOhOqyeckfi4MRclBt782QyJ87pzksNCXzSpLNaH4s2Wq3L_oMruI-oRD27uiwoQpQPxJECALT6AaNfDhrNbazg_dQ6LcDv0NDcaZnrWXYx";
   url:string = "https://api.yelp.com/v3/businesses/search";
   constructor(public http: Http) {
     console.log('Hello YelpProvider Provider');
