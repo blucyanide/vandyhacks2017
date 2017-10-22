@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Passion+One');
 
 page-home {
-  background-color: #f4f4f4;
+  background-image: url("../../assets/imgs/dinner.jpg");
+  background-size: cover;
 }
 
 #header{
@@ -16,7 +17,7 @@ page-home {
 }
 
 #main{
-  padding-top: 30%;
+  padding-top: 25%;
   text-align:center;
 }
 
@@ -157,10 +158,4 @@ p {
   margin-top: 0;
   margin-bottom: 0;
   color: #fff;
-}
-
-#content {
-  height: 100%;
-  background-image: url("../../assets/imgs/dinner.jpg");
-  background-size: cover;
 }

@@ -3,18 +3,31 @@ page-filters {
 }
 
 #transport_container{
-  background-color: #ffdd7a;
-  height: 50%;
-  width: 200%;
-  margin-left:-100%;
-  margin-right:-100%;
 }
 #transport_car{
-  background-color: #ffdd7a;
 }
 
 #transport_walk{
-  background-color: #ffb75c;
+  display: none;
+}
+
+#type_breakfast{
+}
+
+#type_lunch{
+  display: none;
+}
+
+#type_dinner{
+  display: none;
+}
+
+#type_cafe{
+  display: none;
+}
+
+#type_snack{
+  display: none;
 }
 
 #car{
