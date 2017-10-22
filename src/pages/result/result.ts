@@ -18,6 +18,7 @@ export class ResultPage {
 
   selected: any;
   name: any;
+  address: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private yelp: YelpProvider) {
     // this.longitude = this.navParams.get("longitude");
@@ -53,9 +54,17 @@ export class ResultPage {
     if (response["total"] == 0) {
 
     } else {
-      let index = Math.floor(Math.random() * response["total"]) + 1;
+      let index = Math.floor(Math.random() * list.length) + 1;
+      console.log(index);
       this.selected = list[index];
-      this.name = this.selected.name;
+      if (this.selected.name !== undefined) {
+        this.name = this.selected.name;
+      } else {
+        this.name = this.selected.id;
+      }
+      this.address = this.selected.location.address1+" "+this.selected.location.address2+" "+
+        this.selected.location.address3+", "+this.selected.location.city+", "
+        +this.selected.location.state;
     }
   }
 
